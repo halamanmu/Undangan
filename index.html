@@ -24,6 +24,18 @@
             text-align: center;
         }
 
+        .card {
+            background: rgba(0, 0, 0, 0.4);
+            color: #333;
+            width: 100%;
+            max-width: 1100px;
+            margin: 0px 15px;
+            padding: 70px 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            background-size: cover;
+        }
+
         .container-cover {
             color: #fff;
             font-size: 2.2em;
@@ -88,18 +100,6 @@
             color: white;
             cursor: pointer;
             margin-top: 20px;
-        }
-
-        .card {
-            background: rgba(0, 0, 0, 0.4);
-            color: #333;
-            width: 100%;
-            max-width: 1100px;
-            margin: 0px 15px;
-            padding: 70px 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            background-size: cover;
         }
 
         .gambar-atas {
@@ -542,7 +542,7 @@
 
 
         /* Responsive adjustment */
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
 
             h1 {
                 font-size: 1.5em;
@@ -578,7 +578,7 @@
                 margin-left: auto;
                 margin-right: auto;
                 max-width: 800px;
-                width: 90%;
+                width: 80%;
                 font-size: 20px;
             }
 
@@ -589,6 +589,10 @@
 
             .welcome-to {
                 font-size: 0.5em;
+            }
+
+            .container-cover {
+                max-width: 300px;
             }
 
             .container-cover .judul-cover {
@@ -614,15 +618,18 @@
 
 
             .card {
-                background: rgba(0, 0, 0, 0.4);
-                color: #333;
-                max-width: 600px;
-                width: 100%;
-                padding: 70px 25px;
+                max-width: 100%;
+                padding: 20px 30px;
                 border-radius: 0;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-                background-size: cover;
-                box-sizing: border-box;
+            }
+
+            .overlay {
+                width: 100vw;
+                padding: 0;
+                background-color: rgba(0, 0, 0, 0.6);
+                min-height: 100vh;
+                overflow-x: hidden;
+                /* cegah isi meluber ke kanan */
             }
 
             .gambar-atas {
@@ -661,7 +668,7 @@
             }
 
             .jadwal-item {
-                width: 85%;
+                width: 75%;
                 padding: 10px 20px 25px 20px;
                 margin-top: 30px;
                 margin-left: auto;
@@ -725,7 +732,7 @@
             }
 
             .rsvp-container {
-                width: 90%;
+                width: 75%;
                 background-color: rgba(18, 153, 144, 0.1);
                 color: #333;
                 padding: 10px 20px 25px 20px;
@@ -753,7 +760,33 @@
                 box-sizing: border-box;
             }
 
+            #resume-rsvp {
+                font-size: 0.8em;
+                margin-top: 20px;
+                font-weight: 700;
+                color: white;
+                background-color: rgba(18, 153, 144);
+                padding: 15px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                border-radius: 8px;
+            }
 
+
+        }
+
+        /* Keyframes animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+
+
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
